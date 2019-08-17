@@ -1,16 +1,21 @@
+
+# Requirements
+`lyricsgenius (pip install lyricsgenius)`
+
+
 # Lyricist
 Generate your own lyrics!
 
-The idea for this project comes from https://github.com/iluxonchik/lyricist
-That project no longer works though (presumably from Genius site changes breaking the scraping functionality), so I decided to create my own.
+The idea for this project comes from https://github.com/iluxonchik/lyricist. Though that project no longer works(presumably from Genius site changes breaking the scraping functionality) so I decided to create my own. It uses a Markov Chain to model text using bigrams (oh look at me sounding smart)
 
 # Usage
 
 In order to download and generate lyrics, 2 files must be run.
 
-``download_songs.py``
+`download_songs.py`
 and
-``generate.py``
+`generate.py`
+
 ```
 usage: download_lyrics.py [-h] [--dir DIR] [-n N] artist
 
@@ -39,5 +44,5 @@ optional arguments:
 ``download_songs.py`` creates a '.txt' file with all of the lyrics downloaded.
 The name of the file defaults to the name of the artist (Ex: "Michael Jackson.txt"), but it can be specified using ``--dir``
 
-You then run ``generate.py`` using the file that was just created.
+You then run ``generate.py`` using the file that was just created and it creates "output.txt"
 ***Example***: ``python generate.py "Michael Jackson.txt"``
